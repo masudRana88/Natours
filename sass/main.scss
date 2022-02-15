@@ -1,0 +1,170 @@
+
+// Veriable
+$color-primary : #55c57a ;
+$color-primary-light: #7ed56f; 
+$color-primary-dark: #28b485 ;
+$text-gray : #777;
+$text-white: #fff;
+$bg-white: #fff;
+
+/* Universel Selector */
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+/* Html */
+html{
+    font-size: 62.5%;
+}
+/* Body tag */
+body{
+    font-family: "Lato", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.7;
+    color: $text-gray; 
+    padding: 3rem;
+    box-sizing: border-box;
+}
+
+/* header section */
+.header{
+    height: 95vh;
+    background-image: linear-gradient(to right bottom,
+    rgba($color-primary-light, 0.8),
+    rgba($color-primary-dark, 0.8)),
+    url(../img/hero.jpg);
+    background-position: top;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
+    position: relative;
+}
+
+/* logo */
+.header__logo-box{
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+}
+.header__logo{
+    height: 3rem;
+}
+
+/* Heading */
+.header__text-box{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.heading-primary{
+    color: $text-white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 3rem;
+}
+.heading-primary--main{
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+}
+.heading-primary--sub{
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.9rem;
+    animation-name: moveInRight;
+    animation-duration: 2s;
+}
+.btn:link, .btn:visited{
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    position: relative;
+    
+}
+.btn:hover{
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+.btn:active{
+    transform: translateY(-.1rem);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+
+.btn--white{
+    background-color: $bg-white;
+    color: $text-gray;
+}
+.btn--animated{
+    animation-name: moveInBootm;
+    animation-duration: 2s;
+}
+.btn::after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+}
+.btn--white::after{
+    background-color: $bg-white;
+}
+.btn:hover::after{
+    transform: scale(2);
+    opacity: 0;
+}
+
+/* Animation */
+@keyframes moveInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    80%{
+        transform: translateX(1rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes moveInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+    80%{
+        transform: translateX(-1rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes moveInBootm{
+    0%{
+        opacity: 0;
+        transform: translateY(10rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
