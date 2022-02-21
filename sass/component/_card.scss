@@ -1,0 +1,29 @@
+.card-box{
+    width: 80%;
+    margin: 0 auto;
+}
+.card{
+    background-color: rgba($color-white,.8);
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 2rem;
+    border-radius: 3%;
+    box-shadow: 0 .5rem 2rem rgba($color-black, 0.5);
+    transition: all .3s;
+    &:hover{
+       box-shadow: 0 2rem 2rem rgba($color-black, 0.5);
+       transform: translateY(-5%) scale(1.03);
+    }
+    &__icon{
+        font-size: 6rem;
+        margin-bottom: .5rem;
+         background-image: linear-gradient(to right bottom,$color-primary-light,$color-primary-dark);
+        -webkit-background-clip: text;
+        color: transparent !important;
+    }
+    &__header{
+        margin-bottom: .5rem;
+        text-transform: uppercase;
+    }
+}

@@ -1,0 +1,77 @@
+// Button component 
+.btn{
+    &:link,&:visited{
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all 0.2s;
+        position: relative;
+    }
+    &:hover {
+        transform: translateY(-0.3rem);
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+        &:hover::after {
+            transform: scale(1.5,1.6);
+            opacity: 0;
+        }
+    }
+    &:active {
+        transform: translateY(-0.1rem);
+        box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    }
+
+    &--white {
+        background-color: $color-white;
+        color: $coler-gray;
+
+        &::after {
+            background-color: $color-white;
+        }
+    }
+
+    &--animated {
+        animation-name: moveInBootm;
+        animation-duration: 2s;
+    }
+    &::after {
+        content: "";
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        display: inline-block;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all 0.4s;
+    }
+}
+
+.btn-text{
+    &:link,&:visited{
+        display: inline-block;
+        text-decoration: none;
+        color: $color-primary;
+        font-size: 1.6rem;
+        font-weight: 600;
+        padding: 2px 5px;
+        // background-color: blueviolet;
+        border-bottom: 1px solid $color-primary;
+        border-radius: 5%;
+        transition: all .3s;
+    }
+    &:hover{
+        background-color: $color-primary;
+        color: $color-white;
+        box-shadow: 0 .5rem 2rem rgba($color-black, 0.2);
+        transform: translateY(-2px);
+    }
+    &:active{
+        transform: translateY(1px);
+    }
+    &::after{
+
+    }
+}

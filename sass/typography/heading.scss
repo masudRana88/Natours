@@ -1,0 +1,45 @@
+@import "../variable";
+
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 3rem;
+    &--main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+        animation-name: moveInLeft;
+        animation-duration: 2s;   
+    }
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.9rem;
+        animation-name: moveInRight;
+        animation-duration: 2s;
+    }
+}
+
+.heading-secondary{
+    color: $color-white;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    // margin-bottom: 3.5rem;
+    font-size: 3rem;
+    font-weight: 700;
+    transition: all .5s;
+    &:hover{
+        transform: skewY(-2deg) skewX(15deg) scale(1.1);
+        text-shadow: 0.5rem 1rem 1rem $color-primary-dark;
+    }
+}
+
+.heading-tertiary{
+    color: $coler-gray;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
