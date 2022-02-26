@@ -4,11 +4,13 @@
 
 @import "component/button";
 @import "component/gallery";
-@import "component/card";
+@import "component/features-box";
 
 @import "typography/heading";
 @import "typography/comon";
+@import "typography/grid.scss";
 
 @import "section/header";
 @import "section/aboutSection";
 @import "section/features-section";
+@import "section/tourSection";

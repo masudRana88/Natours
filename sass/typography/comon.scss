@@ -36,30 +36,13 @@
 .mt-1{
     margin-top: 1rem;
 }
-// GRID
-.row-2{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 2rem;
-    .col{
-        height: 100%;
-        width: 100%;
-    }
-}
-.row-4{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap:2.5rem ;
-    .col{
-        height: 100%;;
-        width: 100%;
-        margin-right: 2rem;
-        margin: 0 auto;
-    }
-}
+
 .paragraph{
     font-size: 1.6rem;
     line-height: 3rem;
     letter-spacing: .1rem;
 }
 // display
+.overflow-hidden{
+    overflow: hidden;
+}

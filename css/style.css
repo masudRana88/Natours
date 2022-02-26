@@ -158,14 +158,8 @@ body {
   transform: scale(0.9);
 }
 
-.card-box {
-  width: 80%;
-  margin: 0 auto;
-}
-
-.card {
+.features-box {
   background-color: rgba(255, 255, 255, 0.8);
-  width: 100%;
   text-align: center;
   font-size: 1.5rem;
   padding: 2rem;
@@ -173,18 +167,18 @@ body {
   box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.5);
   transition: all 0.3s;
 }
-.card:hover {
+.features-box:hover {
   box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.5);
   transform: translateY(-5%) scale(1.03);
 }
-.card__icon {
+.features-box .features__icon {
   font-size: 6rem;
   margin-bottom: 0.5rem;
   background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
   -webkit-background-clip: text;
   color: transparent !important;
 }
-.card__header {
+.features-box .features__header {
   margin-bottom: 0.5rem;
   text-transform: uppercase;
 }
@@ -279,32 +273,45 @@ body {
   margin-top: 1rem;
 }
 
-.row-2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 2rem;
-}
-.row-2 .col {
-  height: 100%;
-  width: 100%;
-}
-
-.row-4 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 2.5rem;
-}
-.row-4 .col {
-  height: 100%;
-  width: 100%;
-  margin-right: 2rem;
-  margin: 0 auto;
-}
-
 .paragraph {
   font-size: 1.6rem;
   line-height: 3rem;
   letter-spacing: 0.1rem;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.row:not(:last-child) {
+  margin-bottom: 4rem;
+}
+.row [class^=col-] {
+  float: left;
+}
+.row [class^=col-]:not(:last-child) {
+  margin-right: 6rem;
+}
+.row .col-1-of-2 {
+  width: calc((100% - 6rem) / 2);
+}
+.row .col-1-of-3 {
+  width: calc((100% - (2*6rem)) / 3);
+}
+.row .col-1-of-4 {
+  width: calc((100% - (3*3rem)) / 4);
+}
+.row .col-1-of-4:not(:last-child) {
+  margin-right: 3rem;
 }
 
 /* header section */
@@ -351,6 +358,16 @@ body {
   transform: skewY(-7deg);
 }
 .features-section > * {
+  transform: skewY(7deg);
+}
+
+.tour-section {
+  background-color: #777;
+  transform: skewY(-7deg);
+  padding-top: 10rem;
+  height: 95vh;
+}
+.tour-section > * {
   transform: skewY(7deg);
 }
 

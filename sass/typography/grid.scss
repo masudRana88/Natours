@@ -1,0 +1,42 @@
+.row{
+    max-width: $grid-width;
+    margin: 0 auto;
+    // remove float
+    &::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+    &:not(:last-child){
+        margin-bottom: $gutter-vertical-small;
+    }
+   
+
+    [class^="col-"]{ 
+        &:not(:last-child){
+            margin-right: $gutter-horizontal;
+        }
+        float: left;
+    }
+    // Coll
+    .col-1-of-2{
+        width: calc((100% - #{$gutter-horizontal}) / 2);
+    }
+    .col-1-of-3{
+        width: calc((100% - (2*#{$gutter-horizontal}))/3);
+    }
+    .col-1-of-4{
+        width: calc((100% - (3*#{$gutter-horizontal-small}))/4);
+         &:not(:last-child){
+            margin-right: $gutter-horizontal-small;
+        }
+    }
+}
+
+// @mixin clearFlix {
+//     &::after{
+//         content: "";
+//         display: table;
+//         clear: both;
+//     }
+// }
