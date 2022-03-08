@@ -5,12 +5,10 @@
 @import "component/button";
 @import "component/gallery";
 @import "component/features-box";
+@import "component/card";
 
 @import "typography/heading";
 @import "typography/comon";
 @import "typography/grid.scss";
 
-@import "section/header";
-@import "section/aboutSection";
-@import "section/features-section";
-@import "section/tourSection";
+@import "pages/home"

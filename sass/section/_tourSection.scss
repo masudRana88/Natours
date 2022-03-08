@@ -1,9 +1,0 @@
-.tour-section{
-    background-color: $coler-gray;
-    transform: skewY(-7deg);
-    padding-top: 10rem;
-    height: 95vh;
-    & > *{
-        transform: skewY(7deg);
-    }
-}
